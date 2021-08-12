@@ -1,15 +1,15 @@
 import express from 'express';
+import { connectDB } from './config/mongoDB.js'
+import { env } from './config/environtment.js'
 
 const app = express();
 
-const hostname = 'localhost';
-
-const port = 8081;
+connectDB().catch(console.log)
 
 app.get('/', (req, res) => {
     res.end('<h1>Love Mai</h1>');
 });
 
-app.listen(port, hostname, () => {
-    console.log(`Mai in ${hostname}: port ${port}`)
+app.listen(env.PORT, env.HOST, () => {
+    console.log(`Mai in ${env.HOST}: port ${env.PORT}`)
 })
