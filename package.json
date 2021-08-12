@@ -1,0 +1,29 @@
+{
+  "name": "trello-web-api",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/thuhuong1995/trello-web-api.git"
+  },
+  "author": "GhostFury <thuhuongvnhubt@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thuhuong1995/trello-web-api/issues"
+  },
+  "homepage": "https://github.com/thuhuong1995/trello-web-api#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint src"
+  },
+  "keywords": [],
+  "description": "trello-api",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.15.0",
+    "eslint": "^7.32.0"
+  }
+}

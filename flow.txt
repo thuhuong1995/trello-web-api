@@ -1,0 +1,7 @@
+server => routers => middleware => validations => controller(logic, data ...) => services => models => DB
+// boilerplate
+
+=> package.json :
+    "main": "src/server.js",
+    "type": "module",
+we can run node src/file
