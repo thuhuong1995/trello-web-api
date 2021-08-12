@@ -5,3 +5,6 @@ server => routers => middleware => validations => controller(logic, data ...) =>
     "main": "src/server.js",
     "type": "module",
 we can run node src/file
+
+package :
+npm install --save-dev @babel/core @babel/cli @babel/node @babel/preset-env @babel/plugin-transform-runtime
