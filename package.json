@@ -27,7 +27,9 @@
   "description": "trello-api",
   "dependencies": {
     "@babel/runtime": "^7.15.3",
-    "express": "^4.17.1"
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",
