@@ -1,15 +1,25 @@
 import express from 'express';
-import { connectDB } from './config/mongoDB.js'
-import { env } from './config/environtment.js'
+import { env } from './config/environtment.js';
+import { connectDB } from './config/mongoDB.js';
 
-const app = express();
 
-connectDB().catch(console.log)
+connectDB()
+    .then(() => console.log('Connected success'))
+    .then(() => bootServer())
+    .catch((err) => {
+        console.log(err)
+        process.exit();
+    })
 
-app.get('/', (req, res) => {
-    res.end('<h1>Love Mai</h1>');
-});
+const bootServer = () => {
+    const app = express();
 
-app.listen(env.PORT, env.HOST, () => {
-    console.log(`Mai in ${env.HOST}: port ${env.PORT}`)
-})
+    app.get('/test', async (req, res) => {
+
+        res.end('<h1>Love Mai</h1>');
+    });
+
+    app.listen(env.APP_PORT, env.APP_HOST, () => {
+        console.log(`Mai in ${env.APP_HOST}: port ${env.APP_PORT}`)
+    })
+}
